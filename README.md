@@ -13,12 +13,23 @@ I found stock implementation (https://github.com/koreader/koreader-sync-server) 
 ## Install and run
 
 ```bash
-> pip install flask-restful
+> uv run koreader-flask.py --help
+```
 
-> pip install pyopenssl
+## Create and test new user
 
-> python3 koreader-flask.py --help
+```
+curl -X POST https://koreader-sync.lab.sheckler.info/users/create \
+  -H "Content-Type: application/json" \
+  -d '{
+    "username": "username",
+    "password": "md5(password)"
+  }'
 
+
+curl https://koreader-sync.lab.sheckler.info/users/auth \
+  -H "X-Auth-User: username" \
+  -H "X-Auth-Key: md5(password)" 
 ```
 
 ## Modify according to your needs
