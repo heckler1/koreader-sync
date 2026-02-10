@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+koreader-server.log
+users.json

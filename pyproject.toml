@@ -1,7 +1,7 @@
 [project]
 name = "koreader-sync-api"
-version = "0.1.0"
-description = "Add your description here"
+version = "0.0.1"
+description = "Quick and dirty implementation of the KOReader sync service"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
